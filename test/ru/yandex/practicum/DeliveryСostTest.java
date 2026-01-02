@@ -8,7 +8,7 @@ import ru.yandex.practicum.delivery.Parcel;
 import ru.yandex.practicum.delivery.PerishableParcel;
 import ru.yandex.practicum.delivery.StandartParcel;
 
-public class DeliveryCostTest {
+public class DeliveryСostTest {
 
     private static Parcel standartParcel;
     private static Parcel brittleParcel;
@@ -26,19 +26,19 @@ public class DeliveryCostTest {
 
     @Test
     public void costOfStandardParcel2 () {
-        double costParcel = standartParcel.calculateDeliveryCost();
+        double costParcel = standartParcel.calculateDeliveryСost();
         Assertions.assertEquals(2.0, costParcel);
     }
 
     @Test
     public void costOfPerishableParcel3 () {
-        double costParcel = perishableParcel.calculateDeliveryCost();
+        double costParcel = perishableParcel.calculateDeliveryСost();
         Assertions.assertEquals(3.0, costParcel);
     }
 
     @Test
     public void costOfBrittleParcel4 () {
-        double costParcel = brittleParcel.calculateDeliveryCost();
+        double costParcel = brittleParcel.calculateDeliveryСost();
         Assertions.assertEquals(4.0, costParcel);
     }
 

@@ -2,7 +2,7 @@ package ru.yandex.practicum.delivery;
 
 
 public class BrittleParcel extends Parcel{
-    protected static int COST = 4;
+    protected static int cost = 4;
     public BrittleParcel(String description, double weight, String deliveryAddress, int sendDay) {
         super(description, weight, deliveryAddress, sendDay, 4);
     }
@@ -14,8 +14,8 @@ public class BrittleParcel extends Parcel{
     }
 
     @Override
-    public double calculateDeliveryCost() {
-        return COST * weight;
+    public double calculateDeliverycost() {
+        return cost * weight;
     }
 
 }
