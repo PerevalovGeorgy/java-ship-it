@@ -14,7 +14,7 @@ public class BrittleParcel extends Parcel{
     }
 
     @Override
-    public double calculateDeliverycost() {
+    public double calculateDeliveryСost() {
         return cost * weight;
     }
 

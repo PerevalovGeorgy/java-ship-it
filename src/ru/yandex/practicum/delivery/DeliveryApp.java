@@ -27,7 +27,7 @@ public class DeliveryApp {
                     sendParcels();
                     break;
                 case 3:
-                    calculatecosts();
+                    calculateСosts();
                     break;
                 case 4:
                     System.out.println("выберите какой объект отследить");
@@ -131,14 +131,14 @@ public class DeliveryApp {
         }
     }
 
-    private static void calculatecosts() {
+    private static void calculateСosts() {
         // Посчитать общую стоимость всех доставок и вывести на экран
-        double allcost = 0;
+        double allСost = 0;
         for (Parcel parcel : allParcels) {
-            double cost = parcel.calculateDeliverycost();
-            allcost += cost;
+            double cost = parcel.calculateDeliveryСost();
+            allСost += cost;
         }
-        System.out.println("общая стоимость доставки = " + allcost);
+        System.out.println("общая стоимость доставки = " + allСost);
     }
 
 }
