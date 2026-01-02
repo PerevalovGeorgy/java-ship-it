@@ -10,7 +10,6 @@ public abstract class Parcel implements Trackable {
     protected int sendDay;
     protected static int cost;
 
-
     public Parcel(String description, double weight, String deliveryAddress, int sendDay, int cost) {
         this.description = description;
         this.weight = weight;
