@@ -1,7 +1,7 @@
 package ru.yandex.practicum.delivery;
 
 
-public class BrittleParcel extends Parcel{
+public class BrittleParcel extends Parcel {
     protected static int cost = 4;
 
     public BrittleParcel(String description, double weight, String deliveryAddress, int sendDay) {
