@@ -58,5 +58,5 @@ public abstract class Parcel implements Trackable{
     public int hashCode() {
         return Objects.hash(description, weight, deliveryAddress, sendDay);
     }
-    
+
 }
