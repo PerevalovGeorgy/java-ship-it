@@ -22,7 +22,7 @@ public class ParcelBox<T extends Parcel> {
         }
     }
 
-    public void getAllParcels () {
+    public void getAllParcels() {
         if (parcels.isEmpty()) {
             System.out.println("в коробке нет посылок");
         } else {
