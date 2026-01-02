@@ -2,7 +2,7 @@ package ru.yandex.practicum.delivery;
 
 import java.util.Objects;
 
-public abstract class Parcel implements Trackable{
+public abstract class Parcel implements Trackable {
     //добавьте реализацию и другие необходимые классы
     protected String description;
     protected double weight;
