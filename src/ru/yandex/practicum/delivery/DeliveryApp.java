@@ -36,7 +36,7 @@ public class DeliveryApp {
                     }
                     int numberParcel = scanner.nextInt();
                     scanner.nextLine();
-                    Parcel parcel = allParcels.get(numberParcel);
+                    BrittleParcel parcel = (BrittleParcel) allParcels.get(numberParcel);
                     System.out.println("введите местоположение");
                     String newLocation = scanner.nextLine();
                     parcel.reportStatus(newLocation);
@@ -47,13 +47,13 @@ public class DeliveryApp {
                     scanner.nextLine();
                     switch (boxType) {
                         case 1:
-                            standartBox.getAllParcels();
+                            standartBox.printAllParcels();
                             break;
                         case 2:
-                            brittleBox.getAllParcels();
+                            brittleBox.printAllParcels();
                             break;
                         case 3:
-                            perishableBox.getAllParcels();
+                            perishableBox.printAllParcels();
                             break;
                         default:
                             System.out.println("Неверный выбор.");

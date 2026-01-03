@@ -2,20 +2,18 @@ package ru.yandex.practicum.delivery;
 
 import java.util.Objects;
 
-public abstract class Parcel implements Trackable {
-    //добавьте реализацию и другие необходимые классы
+public abstract class Parcel {
     protected String description;
     protected double weight;
     protected String deliveryAddress;
     protected int sendDay;
-    protected static int cost;
 
-    public Parcel(String description, double weight, String deliveryAddress, int sendDay, int cost) {
+
+    public Parcel(String description, double weight, String deliveryAddress, int sendDay) {
         this.description = description;
         this.weight = weight;
         this.deliveryAddress = deliveryAddress;
         this.sendDay = sendDay;
-        Parcel.cost = cost;
     }
 
     public void packageItem() {
@@ -26,9 +24,7 @@ public abstract class Parcel implements Trackable {
         System.out.println("Посылка " + description + " доставлена по адресу " + deliveryAddress);
     }
 
-    public double calculateDeliveryCost() {
-        return cost * weight;
-    }
+    public abstract double calculateDeliveryCost();
 
     public String getDescription() {
         return description;
@@ -36,11 +32,6 @@ public abstract class Parcel implements Trackable {
 
     public double getWeight() {
         return weight;
-    }
-
-    @Override
-    public void reportStatus(String newLocation) {
-        System.out.println("Хрупкая посылка " + description + " изменила местоположение на " + newLocation);
     }
 
     @Override
