@@ -23,8 +23,11 @@ public class ParcelBox<T extends Parcel> {
     public void addParcel(T parcel) {
         double addedMass = parcel.getWeight();
         if (maxMass >= currentMass) {
-            parcels.add(parcel);
-            currentMass += addedMass;
+            double sumMas = currentMass + addedMass;
+            if (maxMass >= sumMas) {
+                parcels.add(parcel);
+                currentMass = sumMas;
+            }
         } else {
             System.out.println("Превышена масса коробки, посылку не добавляем");
         }
