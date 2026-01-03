@@ -21,19 +21,18 @@ public class ParcelBox<T extends Parcel> {
     }
 
     public void addParcel(T parcel) {
-        double addedMass = parcel.getWeight();
         if (maxMass >= currentMass) {
+            double addedMass = parcel.getWeight();
             double sumMas = currentMass + addedMass;
             if (maxMass >= sumMas) {
                 parcels.add(parcel);
                 currentMass = sumMas;
+            } else {
+                System.out.println("Превышена масса коробки, посылку не добавляем");
             }
-        } else {
-            System.out.println("Превышена масса коробки, посылку не добавляем");
         }
     }
 
-    //в задании указано, что метод должен называться getAllParcels, но по смыслу согласен на изменение названия
     public void printAllParcels() {
         if (parcels.isEmpty()) {
             System.out.println("в коробке нет посылок");

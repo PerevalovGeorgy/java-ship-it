@@ -28,17 +28,17 @@ public class AddedToTheBoxTest {
     }
 
     @Test
-    public void parcelAddedToTheBox () {
+    public void twoParcelsAddedToTheBox () {
         box.addParcel((StandartParcel) parcel1);
         box.addParcel((StandartParcel) parcel2);
-        Assertions.assertTrue(box.getCurrentMass() < box.getMaxMass());
+        Assertions.assertEquals(2, box.getParcels().size());
     }
 
     @Test
-    public void parcelNotAddedToTheBox () {
+    public void thirdParcelIsNotAddedToTheBox () {
         box.addParcel((StandartParcel) parcel1);
         box.addParcel((StandartParcel) parcel2);
         box.addParcel((StandartParcel) parcel3);
-        Assertions.assertFalse(box.getCurrentMass() < box.getMaxMass());
+        Assertions.assertEquals(2, box.getParcels().size());
     }
 }

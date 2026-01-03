@@ -2,7 +2,7 @@ package ru.yandex.practicum.delivery;
 
 
 public class BrittleParcel extends Parcel implements Trackable {
-    private static final int BASE_COST = 4;
+    private static final double BASE_COST = 4;
 
     public BrittleParcel(String description, double weight, String deliveryAddress, int sendDay) {
         super(description, weight, deliveryAddress, sendDay);
@@ -14,13 +14,9 @@ public class BrittleParcel extends Parcel implements Trackable {
         super.packageItem();
     }
 
-    public int getBASE_COST() {
-        return BASE_COST;
-    }
-
     @Override
-    public double calculateDeliveryCost() {
-        return weight * getBASE_COST();
+    public double getBaseCost() {
+        return BASE_COST;
     }
 
     @Override

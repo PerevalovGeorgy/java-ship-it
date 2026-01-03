@@ -24,7 +24,11 @@ public abstract class Parcel {
         System.out.println("Посылка " + description + " доставлена по адресу " + deliveryAddress);
     }
 
-    public abstract double calculateDeliveryCost();
+    public double calculateDeliveryCost() {
+        return weight * getBaseCost();
+    }
+
+    protected abstract double getBaseCost();
 
     public String getDescription() {
         return description;
