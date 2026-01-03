@@ -27,7 +27,7 @@ public class ParcelBox<T extends Parcel> {
             System.out.println("в коробке нет посылок");
         } else {
             for (Parcel parcel : parcels) {
-                System.out.println("Посылка" + parcel.getDescription());
+                System.out.println("Посылка " + parcel.getDescription());
             }
         }
     }

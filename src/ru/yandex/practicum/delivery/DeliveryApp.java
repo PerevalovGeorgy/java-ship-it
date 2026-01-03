@@ -32,7 +32,7 @@ public class DeliveryApp {
                 case 4:
                     System.out.println("выберите какой объект отследить");
                     for (int i = 0; i < allParcels.size(); i++) {
-                        System.out.println((i) + " - " + allParcels.get(i));
+                        System.out.println((i) + " - " + allParcels.get(i).getDescription());
                     }
                     int numberParcel = scanner.nextInt();
                     scanner.nextLine();
